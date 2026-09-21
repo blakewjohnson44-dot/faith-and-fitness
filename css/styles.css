@@ -7,7 +7,7 @@
   --line: rgba(245, 244, 240, 0.14);
   --pink: #ff4fa3;
   --teal: #35d6c4;
-  --font-display: "Bitter", Georgia, serif;
+  --font-display: "Bevan", Georgia, serif;
   --font-body: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
   --wrap: 1100px;
 }
@@ -60,16 +60,10 @@ a { color: inherit; text-decoration: none; }
   width: 42px;
   height: 42px;
   flex-shrink: 0;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid var(--line);
 }
-
-.brand-mark-faith,
-.brand-mark-fitness {
-  font-family: var(--font-display);
-  font-weight: 900;
-  fill: var(--ink);
-}
-.brand-mark-faith { font-size: 15px; letter-spacing: 0.5px; }
-.brand-mark-fitness { font-size: 10px; letter-spacing: 1px; }
 
 .brand-name {
   font-family: var(--font-display);

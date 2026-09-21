@@ -1,12 +1,15 @@
-# Photos to add
+# Photos
 
-Placeholder frames are live on the site now. To swap in real photos, drop
-the file in this folder and update the matching `<img src>` in the HTML —
-no other changes needed.
+Real logo and flyer graphics (pulled from @faithandfitness_422 on Instagram)
+are in place. Still on placeholders:
 
-- `assets/hero.jpg` → homepage hero photo (16:9)
-- `assets/moments/july-24.jpg` → Moments card, July 24 class (4:5)
-- `assets/moments/august-28.jpg` → Moments card, August 28 class (4:5)
-- `assets/moments/september-26.jpg` → Moments card, September 26 class (4:5)
-- `assets/merch/tee-orchid.jpg` → Merch teaser + product card, Orchid tee (4:5)
-- `assets/merch/tee-ivory.jpg` → Merch teaser + product card, Ivory tee (4:5)
+- `assets/hero.jpg` → homepage hero photo (16:9) — still a placeholder frame
+
+Already real:
+
+- `assets/logo.jpg` → nav + footer logo (from the Instagram profile photo)
+- `assets/moments/july-24.jpg`, `august-28.jpg`, `september-26.jpg` → Moments cards
+- `assets/merch/tee-orchid.jpg`, `tee-ivory.jpg` → cropped from the merch preorder graphic
+- `assets/merch/preorder-graphic.jpg` → the original uncropped merch graphic, kept for reference
+
+To replace any of these, drop a new file in and update the matching `<img src>` — no other changes needed.
