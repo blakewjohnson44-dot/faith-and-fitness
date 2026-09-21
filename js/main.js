@@ -58,3 +58,35 @@ if (votd) {
     render();
   });
 }
+
+const rsvpModal = document.getElementById("rsvpModal");
+if (rsvpModal) {
+  const DISMISS_KEY = "ff_rsvp_dismissed";
+  let alreadyDismissed = false;
+  try {
+    alreadyDismissed = sessionStorage.getItem(DISMISS_KEY) === "1";
+  } catch (e) {}
+
+  const closeModal = () => {
+    rsvpModal.hidden = true;
+    try {
+      sessionStorage.setItem(DISMISS_KEY, "1");
+    } catch (e) {}
+  };
+
+  if (!alreadyDismissed) {
+    setTimeout(() => {
+      rsvpModal.hidden = false;
+    }, 8000);
+  }
+
+  rsvpModal.querySelectorAll("[data-close]").forEach((el) => {
+    el.addEventListener("click", closeModal);
+  });
+  document.getElementById("rsvpModalClose").addEventListener("click", closeModal);
+  document.getElementById("rsvpModalDismiss").addEventListener("click", closeModal);
+  document.getElementById("rsvpModalReserve").addEventListener("click", closeModal);
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && !rsvpModal.hidden) closeModal();
+  });
+}
