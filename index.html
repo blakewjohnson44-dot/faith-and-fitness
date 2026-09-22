@@ -46,15 +46,21 @@
         <a class="btn btn-line" href="https://www.instagram.com/faithandfitness_422/" target="_blank" rel="noopener">@faithandfitness_422</a>
       </div>
 
-      <div class="votd" id="votd">
-        <p class="votd-label">Verse of the Day</p>
-        <p class="votd-text" id="votdText">&nbsp;</p>
-        <p class="votd-ref" id="votdRef">&nbsp;</p>
-        <button class="votd-next" id="votdNext" type="button">Next verse →</button>
-      </div>
-
       <div class="hero-photo photo-frame" aria-hidden="false">
         <img src="assets/hero.jpg" alt="Faith and Fitness group at Troika Strength &amp; Fitness" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <section class="votd" id="votd">
+    <div class="wrap">
+      <div class="votd-card" id="votdCard">
+        <p class="votd-label">📖 Verse of the Day</p>
+        <p class="votd-text" id="votdText">&nbsp;</p>
+        <p class="votd-ref" id="votdRef">&nbsp;</p>
+        <div class="votd-actions">
+          <button class="votd-devo-btn" id="votdDevoBtn" type="button" aria-haspopup="dialog">Devotional →</button>
+        </div>
       </div>
     </div>
   </section>
@@ -197,6 +203,13 @@
         <a class="social-link" href="https://linktr.ee/Troikastrengthandfitness" target="_blank" rel="noopener">Linktree</a>
       </div>
     </div>
+
+    <div class="wrap">
+      <div class="membership-plug">
+        <p>Interested in more Faith &amp; Fitness? Join Troika Strength &amp; Fitness as a member with access to world-class coaching, genuine community, and classes 6 days per week!</p>
+        <a class="btn btn-line" href="https://troikastrengthandfitness.com" target="_blank" rel="noopener">Learn About Membership</a>
+      </div>
+    </div>
   </section>
 
 </main>
@@ -220,6 +233,25 @@
     <div class="rsvp-modal-actions">
       <a class="btn btn-solid" id="rsvpModalReserve" href="https://troikastrengthandfitness.wodify.com/OnlineSalesPage/Main?q=MembershipType%7CLocationId%3D6740%26ClassId%3D196280361%26HasProgramAccess%3DFalse" target="_blank" rel="noopener">Reserve My Spot</a>
       <button class="btn btn-line" id="rsvpModalDismiss" type="button">Maybe Later</button>
+    </div>
+  </div>
+</div>
+
+<div class="devo-modal" id="devoModal" hidden>
+  <div class="devo-modal-backdrop" data-close></div>
+  <div class="devo-modal-sheet" role="dialog" aria-modal="true" aria-labelledby="devoTitle">
+    <div class="devo-modal-handle"></div>
+    <button class="devo-modal-close" id="devoModalClose" type="button" data-close aria-label="Close">&times;</button>
+    <p class="votd-label" id="devoTitle">📖 Today's Devotion</p>
+    <p class="devo-verse-text" id="devoVerseText"></p>
+    <p class="devo-verse-ref" id="devoVerseRef"></p>
+    <div class="devo-section">
+      <p class="devo-heading">Devotion</p>
+      <p class="devo-body" id="devoBody"></p>
+    </div>
+    <div class="devo-section devo-prayer">
+      <p class="devo-heading">🙏 Prayer</p>
+      <p class="devo-body" id="devoPrayer"></p>
     </div>
   </div>
 </div>
