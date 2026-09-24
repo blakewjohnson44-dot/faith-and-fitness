@@ -108,7 +108,7 @@ document.querySelectorAll(".auto-carousel").forEach(initAutoScroll);
 
 const VERSES = [
   {
-    text: "I can do all things through Christ who strengthens me.",
+    text: "I can do all this through him who gives me strength.",
     ref: "Philippians 4:13",
     devotion: "Whatever today holds — a hard workout, a busy schedule, a lot on your plate — you don't have to face it alone. God's strength fills in the gaps. Take a deep breath and let that be enough today.",
     prayer: "God, thank You for being my strength today. Help me feel Your presence in everything I do. Amen.",
@@ -132,7 +132,7 @@ const VERSES = [
     prayer: "Father, help me encourage someone today, even in a small way. Thank You for this community. Amen.",
   },
   {
-    text: "Do you not know that your bodies are a temple of the Holy Spirit?",
+    text: "Do you not know that your bodies are temples of the Holy Spirit, who is in you, whom you have received from God?",
     ref: "1 Corinthians 6:19",
     devotion: "Your body is a gift, made for good things — strength, movement, connection with others. Today, be thankful for what it can do, and be gentle with it.",
     prayer: "Thank You, God, for my body and all the ways it lets me show up for life. Help me care for it well. Amen.",
@@ -162,7 +162,7 @@ const VERSES = [
     prayer: "God, thank You for strength — in my body, my mind, and my spirit. Use it for good today. Amen.",
   },
   {
-    text: "Not that I have already attained this, or am already perfect; but I press on.",
+    text: "Not that I have already obtained all this, or have already arrived at my goal, but I press on to take hold of that for which Christ Jesus took hold of me.",
     ref: "Philippians 3:12",
     devotion: "Nobody has it all figured out, and that's more than okay. Progress, not perfection, is something worth celebrating today.",
     prayer: "Thank You, God, for meeting me right where I am today. Help me keep moving forward with grace. Amen.",
@@ -174,7 +174,7 @@ const VERSES = [
     prayer: "Lord, thank You for being my strength and my help today. Amen.",
   },
   {
-    text: "This is the day the Lord has made; let us rejoice and be glad in it.",
+    text: "The Lord has done it this very day; let us rejoice today and be glad.",
     ref: "Psalm 118:24",
     devotion: "Today doesn't have to be perfect to be worth celebrating. It's a gift, just as it is.",
     prayer: "God, thank You for today. Help me notice the good in it. Amen.",
@@ -264,7 +264,7 @@ const VERSES = [
     prayer: "Thank You, God, for Your steady, never-ending love. Amen.",
   },
   {
-    text: "Trust in the Lord with all your heart... he will make your paths straight.",
+    text: "Trust in the Lord with all your heart and lean not on your own understanding; in all your ways submit to him, and he will make your paths straight.",
     ref: "Proverbs 3:5-6",
     devotion: "You don't have to have today all figured out. Take the next step and trust the rest will come together.",
     prayer: "Lord, I trust You with today, even the parts I can't see clearly yet. Amen.",
@@ -276,7 +276,7 @@ const VERSES = [
     prayer: "God, help me stay present today instead of worrying about what's next. Amen.",
   },
   {
-    text: "Come to me, all you who are weary, and I will give you rest.",
+    text: "Come to me, all you who are weary and burdened, and I will give you rest.",
     ref: "Matthew 11:28",
     devotion: "If you're tired today, that's okay — rest is allowed, and it's offered freely.",
     prayer: "Jesus, thank You for offering me rest today. Help me actually take it. Amen.",
@@ -294,7 +294,7 @@ const VERSES = [
     prayer: "God, thank You for working good into my life, even the parts I don't understand yet. Amen.",
   },
   {
-    text: "Nothing can separate us from the love of God.",
+    text: "For I am convinced that neither death nor life, neither angels nor demons, neither the present nor the future, nor any powers, neither height nor depth, nor anything else in all creation, will be able to separate us from the love of God that is in Christ Jesus our Lord.",
     ref: "Romans 8:38-39",
     devotion: "Whatever kind of day you're having, you're not further from God's love than usual. It's steady, always.",
     prayer: "Thank You, God, that nothing today can separate me from Your love. Amen.",
@@ -312,13 +312,13 @@ const VERSES = [
     prayer: "God, thank You for grace that's enough even when I'm not at my best today. Amen.",
   },
   {
-    text: "The fruit of the Spirit is love, joy, peace, patience, kindness, goodness, and faithfulness.",
+    text: "But the fruit of the Spirit is love, joy, peace, forbearance, kindness, goodness, faithfulness, gentleness and self-control.",
     ref: "Galatians 5:22-23",
-    devotion: "Pick just one of these — love, joy, peace, patience, kindness — and let it shape one moment of your day today.",
+    devotion: "Pick just one of these — love, joy, peace, kindness, gentleness — and let it shape one moment of your day today.",
     prayer: "God, grow Your Spirit's fruit in me a little more today. Amen.",
   },
   {
-    text: "Immeasurably more than all we ask or imagine.",
+    text: "Now to him who is able to do immeasurably more than all we ask or imagine, according to his power that is at work within us…",
     ref: "Ephesians 3:20",
     devotion: "God's plans for today are bigger and kinder than you might expect. Stay open to good surprises.",
     prayer: "God, thank You for doing more in my life than I could ask or imagine. Amen.",
@@ -330,25 +330,25 @@ const VERSES = [
     prayer: "Lord, be my strength today, in every part of it. Amen.",
   },
   {
-    text: "Do not be anxious about anything, but pray about everything.",
+    text: "Do not be anxious about anything, but in every situation, by prayer and petition, with thanksgiving, present your requests to God.",
     ref: "Philippians 4:6",
     devotion: "Whatever's on your mind today, big or small, it's welcome in a quick prayer. Try handing it over as it comes.",
     prayer: "God, I bring today to You — all of it. Thank You for listening. Amen.",
   },
   {
-    text: "Whatever is true, whatever is noble... think about such things.",
+    text: "Finally, brothers and sisters, whatever is true, whatever is noble, whatever is right, whatever is pure, whatever is lovely, whatever is admirable—if anything is excellent or praiseworthy—think about such things.",
     ref: "Philippians 4:8",
     devotion: "What you focus on shapes your day. Today, try aiming your attention at the good stuff.",
     prayer: "God, help my mind land on what's good and true today. Amen.",
   },
   {
-    text: "Whatever you do, whether in word or deed, do it in the name of the Lord.",
+    text: "And whatever you do, whether in word or deed, do it all in the name of the Lord Jesus, giving thanks to God the Father through him.",
     ref: "Colossians 3:17",
     devotion: "Even the small, everyday things — a text, a task, a conversation — can be done with heart today.",
     prayer: "Lord, let everything I say and do today reflect a little of You. Amen.",
   },
   {
-    text: "Let the peace of Christ rule in your hearts... and be thankful.",
+    text: "Let the peace of Christ rule in your hearts, since as members of one body you were called to peace. And be thankful.",
     ref: "Colossians 3:15",
     devotion: "Peace and gratitude tend to show up together. Invite both into today, even in small ways.",
     prayer: "God, let Your peace settle my heart today, and make me thankful. Amen.",
@@ -366,7 +366,7 @@ const VERSES = [
     prayer: "God, show me a simple way to do good for someone today. Amen.",
   },
   {
-    text: "Consider it pure joy... the testing of your faith produces perseverance.",
+    text: "Consider it pure joy, my brothers and sisters, whenever you face trials of many kinds, because you know that the testing of your faith produces perseverance.",
     ref: "James 1:2-3",
     devotion: "Even the hard parts of today are building something good in you, little by little.",
     prayer: "God, help me find a little joy even in today's challenges. Amen.",
@@ -378,7 +378,7 @@ const VERSES = [
     prayer: "Thank You, God, for loving me first. Help me love others well today. Amen.",
   },
   {
-    text: "The Lord is my light and my salvation—whom shall I fear?",
+    text: "The Lord is my light and my salvation—whom shall I fear? The Lord is the stronghold of my life—of whom shall I be afraid?",
     ref: "Psalm 27:1",
     devotion: "Whatever feels uncertain today, you're not walking into it without light or without help.",
     prayer: "God, be my light today, especially in the uncertain moments. Amen.",
@@ -396,7 +396,7 @@ const VERSES = [
     prayer: "God, fill today with Your love, starting right now. Amen.",
   },
   {
-    text: "I lift up my eyes to the mountains—where does my help come from? My help comes from the Lord.",
+    text: "I lift up my eyes to the mountains—where does my help come from? My help comes from the Lord, the Maker of heaven and earth.",
     ref: "Psalm 121:1-2",
     devotion: "When today feels like a lot, it helps to look up. Help is closer than it seems.",
     prayer: "Lord, thank You for being my help today, whenever I need it. Amen.",
@@ -420,7 +420,7 @@ const VERSES = [
     prayer: "Thank You, God, for good friends. Help me be a good one today too. Amen.",
   },
   {
-    text: "Two are better than one... if either falls, one can help the other up.",
+    text: "Two are better than one, because they have a good return for their labor: If either of them falls down, one can help the other up.",
     ref: "Ecclesiastes 4:9-10",
     devotion: "You weren't meant to do life solo. Lean on someone today, or be someone to lean on.",
     prayer: "God, thank You for the people who show up for me. Help me show up for someone today. Amen.",
@@ -432,25 +432,25 @@ const VERSES = [
     prayer: "Thank You, God, for being with me today, wherever it takes me. Amen.",
   },
   {
-    text: "Plans to prosper you and not to harm you, plans to give you hope.",
+    text: "‘For I know the plans I have for you,’ declares the Lord, ‘plans to prosper you and not to harm you, plans to give you hope and a future.’",
     ref: "Jeremiah 29:11",
     devotion: "Today is one small part of a bigger, good plan. Trust that it's headed somewhere worthwhile.",
     prayer: "God, thank You for having good plans for me. Help me trust You with today. Amen.",
   },
   {
-    text: "His mercies are new every morning.",
+    text: "Because of the Lord’s great love we are not consumed, for his compassions never fail. They are new every morning; great is your faithfulness.",
     ref: "Lamentations 3:22-23",
     devotion: "However yesterday went, today is a clean page. That's grace, and it's yours this morning too.",
     prayer: "Thank You, God, for a fresh start today. Amen.",
   },
   {
-    text: "Act justly, love mercy, and walk humbly with your God.",
+    text: "He has shown you, O mortal, what is good. And what does the Lord require of you? To act justly and to love mercy and to walk humbly with your God.",
     ref: "Micah 6:8",
     devotion: "Today doesn't ask for perfection — just kindness, fairness, and a humble heart. That's plenty.",
     prayer: "God, help me be kind, fair, and humble today. Amen.",
   },
   {
-    text: "He will rejoice over you with singing.",
+    text: "The Lord your God is with you, the Mighty Warrior who saves. He will take great delight in you; in his love he will no longer rebuke you, but will rejoice over you with singing.",
     ref: "Zephaniah 3:17",
     devotion: "You're not just tolerated today — you're delighted in. Let that sink in for a second.",
     prayer: "Thank You, God, for delighting in me today, just as I am. Amen.",
@@ -480,13 +480,13 @@ const VERSES = [
     prayer: "God, help me treat others with the kindness I hope for myself today. Amen.",
   },
   {
-    text: "Love one another, as I have loved you.",
+    text: "A new command I give you: Love one another. As I have loved you, so you must love one another.",
     ref: "John 13:34",
     devotion: "You've been loved generously — today's a good day to pass a little of that along.",
     prayer: "Thank You, God, for loving me so well. Help me love others today the same way. Amen.",
   },
   {
-    text: "Peace I leave with you... do not let your hearts be troubled.",
+    text: "Peace I leave with you; my peace I give you. I do not give to you as the world gives. Do not let your hearts be troubled and do not be afraid.",
     ref: "John 14:27",
     devotion: "Whatever's unsettled today, a little peace is available — you just have to receive it.",
     prayer: "God, calm my heart today and fill it with Your peace. Amen.",
@@ -546,7 +546,7 @@ const VERSES = [
     prayer: "God, show me someone I can help carry a little weight for today. Amen.",
   },
   {
-    text: "We are God's handiwork, created to do good works.",
+    text: "For we are God’s handiwork, created in Christ Jesus to do good works, which God prepared in advance for us to do.",
     ref: "Ephesians 2:10",
     devotion: "You were made on purpose, for good things. Today's a chance to live a little of that out.",
     prayer: "Thank You, God, for making me with purpose. Use me for good today. Amen.",
@@ -564,7 +564,7 @@ const VERSES = [
     prayer: "Thank You, God, for the good work You're still doing in me. Amen.",
   },
   {
-    text: "In humility value others above yourselves.",
+    text: "In humility value others above yourselves, not looking to your own interests but each of you to the interests of the others.",
     ref: "Philippians 2:3-4",
     devotion: "Today's a good day to ask about someone else's day before your own. Small shift, big impact.",
     prayer: "God, help me notice and value the people around me today. Amen.",
@@ -588,10 +588,10 @@ const VERSES = [
     prayer: "God, help me notice who needs encouragement today, and give me the words. Amen.",
   },
   {
-    text: "God has not given us a spirit of fear, but of power, love, and a sound mind.",
+    text: "For the Spirit God gave us does not make us timid, but gives us power, love and self-discipline.",
     ref: "2 Timothy 1:7",
-    devotion: "If today feels a little uncertain, remember you've been given courage, not fear, to work with.",
-    prayer: "God, thank You for giving me courage instead of fear today. Amen.",
+    devotion: "If today feels a little uncertain, remember you've been given power, love, and self-discipline to work with — not timidity.",
+    prayer: "God, thank You for the power, love, and self-discipline You give me today. Amen.",
   },
   {
     text: "Let us hold unswervingly to the hope we profess, for he who promised is faithful.",
@@ -600,7 +600,7 @@ const VERSES = [
     prayer: "God, thank You for being faithful. Help me hold onto hope today. Amen.",
   },
   {
-    text: "I will never leave you nor forsake you.",
+    text: "God has said, ‘Never will I leave you; never will I forsake you.’",
     ref: "Hebrews 13:5",
     devotion: "However today goes, you're not walking through it alone. That promise doesn't change.",
     prayer: "Thank You, God, for never leaving my side today. Amen.",
@@ -618,7 +618,7 @@ const VERSES = [
     prayer: "God, show me how to use what I've been given to help someone today. Amen.",
   },
   {
-    text: "There is no fear in love. Perfect love drives out fear.",
+    text: "There is no fear in love. But perfect love drives out fear…",
     ref: "1 John 4:18",
     devotion: "Love has a way of making room feel safer today, both the love you receive and the love you give.",
     prayer: "God, let Your love settle any fear I'm carrying today. Amen.",
@@ -642,7 +642,7 @@ const VERSES = [
     prayer: "Thank You, God, for community. Help me add a little unity to today. Amen.",
   },
   {
-    text: "Be strong and courageous... the Lord your God will be with you wherever you go.",
+    text: "Be strong and courageous. Do not be afraid; do not be discouraged, for the Lord your God will be with you wherever you go.",
     ref: "Joshua 1:9",
     devotion: "Wherever today takes you, you've got company. That makes even the hard parts a little easier.",
     prayer: "God, thank You for going with me today, wherever it leads. Amen.",

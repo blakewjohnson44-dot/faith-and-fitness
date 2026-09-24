@@ -880,6 +880,12 @@ body.no-scroll { overflow: hidden; }
   color: var(--muted);
   font-size: 13px;
 }
+.footer-inner .footer-credit {
+  font-size: 11px;
+  max-width: 560px;
+  line-height: 1.5;
+  opacity: 0.75;
+}
 
 /* ---------- Responsive ---------- */
 @media (min-width: 560px) {
