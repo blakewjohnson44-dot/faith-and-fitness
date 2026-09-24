@@ -15,6 +15,67 @@ siteNav.querySelectorAll("a").forEach((link) => {
   });
 });
 
+function initCarousel(root) {
+  const track = root.querySelector(".carousel-track");
+  const slides = Array.from(track ? track.children : []);
+  const prevBtn = root.querySelector(".carousel-prev");
+  const nextBtn = root.querySelector(".carousel-next");
+  const dotsWrap = root.querySelector(".carousel-dots");
+  if (!track || slides.length === 0) return;
+
+  const dots = slides.map((_, i) => {
+    const dot = document.createElement("button");
+    dot.type = "button";
+    dot.className = "carousel-dot";
+    dot.setAttribute("aria-label", `Go to slide ${i + 1}`);
+    dot.addEventListener("click", () => {
+      track.scrollTo({ left: slides[i].offsetLeft, behavior: "smooth" });
+    });
+    if (dotsWrap) dotsWrap.appendChild(dot);
+    return dot;
+  });
+
+  const setActive = (index) => {
+    dots.forEach((d, i) => d.classList.toggle("is-active", i === index));
+  };
+
+  const currentIndex = () => {
+    let closest = 0;
+    let minDist = Infinity;
+    slides.forEach((s, i) => {
+      const dist = Math.abs(s.offsetLeft - track.scrollLeft);
+      if (dist < minDist) {
+        minDist = dist;
+        closest = i;
+      }
+    });
+    return closest;
+  };
+
+  let scrollTimeout;
+  track.addEventListener("scroll", () => {
+    clearTimeout(scrollTimeout);
+    scrollTimeout = setTimeout(() => setActive(currentIndex()), 80);
+  });
+
+  if (prevBtn) {
+    prevBtn.addEventListener("click", () => {
+      const idx = Math.max(0, currentIndex() - 1);
+      track.scrollTo({ left: slides[idx].offsetLeft, behavior: "smooth" });
+    });
+  }
+  if (nextBtn) {
+    nextBtn.addEventListener("click", () => {
+      const idx = Math.min(slides.length - 1, currentIndex() + 1);
+      track.scrollTo({ left: slides[idx].offsetLeft, behavior: "smooth" });
+    });
+  }
+
+  setActive(0);
+}
+
+document.querySelectorAll(".carousel").forEach(initCarousel);
+
 const VERSES = [
   {
     text: "I can do all things through Christ who strengthens me.",
