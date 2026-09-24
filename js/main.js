@@ -726,3 +726,15 @@ if (rsvpModal) {
     if (e.key === "Escape" && !rsvpModal.hidden) closeModal();
   });
 }
+
+const orderStyle = document.getElementById("orderStyle");
+if (orderStyle) {
+  document.querySelectorAll("[data-order-style]").forEach((link) => {
+    link.addEventListener("click", () => {
+      orderStyle.value = link.dataset.orderStyle;
+    });
+  });
+  if (new URLSearchParams(location.search).get("ordered") === "1") {
+    document.getElementById("orderThanks").hidden = false;
+  }
+}

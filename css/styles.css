@@ -708,6 +708,78 @@ body.no-scroll { overflow: hidden; }
   margin: 0 0 18px;
 }
 
+/* ---------- Merch order form ---------- */
+.order-section { padding: 0 0 72px; }
+
+.order-title {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 4vw, 38px);
+  margin: 0 0 10px;
+}
+
+.order-note {
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.6;
+  max-width: 560px;
+  margin: 0 0 28px;
+}
+
+.order-thanks {
+  border: 1px solid var(--accent);
+  background: var(--accent-dim);
+  color: var(--ink);
+  border-radius: var(--radius-sm);
+  padding: 14px 18px;
+  font-weight: 600;
+  max-width: 720px;
+  margin: 0 0 24px;
+}
+
+.order-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px 20px;
+  max-width: 720px;
+}
+
+.order-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.order-field span {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.order-field em { font-style: normal; font-weight: 500; color: var(--muted); text-transform: none; letter-spacing: 0; }
+.order-field-wide { grid-column: 1 / -1; }
+
+.order-field input,
+.order-field select,
+.order-field textarea {
+  font: inherit;
+  font-size: 16px;
+  color: var(--ink);
+  background: var(--bg-raised);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  padding: 12px 14px;
+  width: 100%;
+}
+.order-field textarea { resize: vertical; }
+.order-field input:focus,
+.order-field select:focus,
+.order-field textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.order-honeypot { display: none; }
+.order-submit { justify-self: start; }
+
 /* ---------- Location ---------- */
 .location { padding: 72px 0; border-top: 1px solid var(--line); }
 
@@ -861,6 +933,8 @@ body.no-scroll { overflow: hidden; }
   .merch-teaser-grid { grid-template-columns: 1fr; }
   .merch-teaser-photos { max-width: 320px; margin: 0 auto; }
   .merch-grid { grid-template-columns: 1fr !important; }
+  .order-form { grid-template-columns: 1fr; }
+  .order-submit { justify-self: stretch; }
 }
 
 @media (min-width: 781px) {

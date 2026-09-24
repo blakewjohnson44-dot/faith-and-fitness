@@ -61,7 +61,7 @@
       <p class="eyebrow">Faith &amp; Fitness</p>
       <h1 class="hero-title">Merch</h1>
       <p class="hero-tagline">Wear the mission.</p>
-      <p class="pillars-blurb">Every piece helps cover coffee, flyers, and the cost of keeping this class free for the whole community. Preorders open periodically — follow along so you don't miss the next drop.</p>
+      <p class="pillars-blurb">Every piece helps cover coffee, flyers, and the cost of keeping this class free for the whole community. Orders are open — send yours below and the Troika team will follow up to confirm.</p>
     </div>
   </section>
 
@@ -74,25 +74,85 @@
           <div class="photo-frame product-photo">
             <img src="assets/merch/tee-orchid.jpg" alt="Orchid women's crop tee — Jesus Is King, Faith &amp; Fitness" loading="lazy">
           </div>
-          <p class="product-status">Preorders closed</p>
+          <p class="product-status">Taking orders</p>
           <h3 class="product-name">Women's Crop Tee</h3>
           <p class="product-variant">Orchid</p>
           <p class="product-price">$35</p>
-          <a class="btn btn-line small" href="https://www.instagram.com/faithandfitness_422/" target="_blank" rel="noopener">Ask About the Next Drop</a>
+          <a class="btn btn-line small" href="#order" data-order-style="Orchid Women's Crop Tee">Order This Tee</a>
         </article>
 
         <article class="product-card">
           <div class="photo-frame product-photo">
             <img src="assets/merch/tee-ivory.jpg" alt="Ivory unisex tee — Jesus Is King, Faith &amp; Fitness" loading="lazy">
           </div>
-          <p class="product-status">Preorders closed</p>
+          <p class="product-status">Taking orders</p>
           <h3 class="product-name">Unisex Tee</h3>
           <p class="product-variant">Ivory</p>
           <p class="product-price">$35</p>
-          <a class="btn btn-line small" href="https://www.instagram.com/faithandfitness_422/" target="_blank" rel="noopener">Ask About the Next Drop</a>
+          <a class="btn btn-line small" href="#order" data-order-style="Ivory Unisex Tee">Order This Tee</a>
         </article>
 
       </div>
+    </div>
+  </section>
+
+  <section class="order-section" id="order">
+    <div class="wrap">
+      <p class="section-label">Place an order</p>
+      <h2 class="order-title">Order a tee</h2>
+      <p class="order-note">Your order goes straight to the Troika team, and they'll email you to confirm and arrange payment. No payment is collected on this page.</p>
+
+      <p class="order-thanks" id="orderThanks" hidden>Thanks, your order was sent! The Troika team will be in touch by email.</p>
+
+      <form class="order-form" action="https://formsubmit.co/troikastrengthandfitness@gmail.com" method="POST">
+        <input type="hidden" name="_subject" value="New merch order — Faith &amp; Fitness">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_next" value="https://faithandfitnessfl.com/merch.html?ordered=1#order">
+        <input type="text" name="_honey" class="order-honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+        <label class="order-field">
+          <span>Name</span>
+          <input type="text" name="name" autocomplete="name" required>
+        </label>
+        <label class="order-field">
+          <span>Email</span>
+          <input type="email" name="email" autocomplete="email" required>
+        </label>
+        <label class="order-field">
+          <span>Phone <em>(optional)</em></span>
+          <input type="tel" name="phone" autocomplete="tel">
+        </label>
+        <label class="order-field">
+          <span>Tee</span>
+          <select name="tee" id="orderStyle" required>
+            <option value="">Choose a tee</option>
+            <option>Orchid Women's Crop Tee</option>
+            <option>Ivory Unisex Tee</option>
+          </select>
+        </label>
+        <label class="order-field">
+          <span>Size</span>
+          <select name="size" required>
+            <option value="">Choose a size</option>
+            <option>XS</option>
+            <option>S</option>
+            <option>M</option>
+            <option>L</option>
+            <option>XL</option>
+            <option>2XL</option>
+          </select>
+        </label>
+        <label class="order-field">
+          <span>Quantity</span>
+          <input type="number" name="quantity" min="1" max="20" value="1" required>
+        </label>
+        <label class="order-field order-field-wide">
+          <span>Notes <em>(optional)</em></span>
+          <textarea name="notes" rows="3" placeholder="Anything else? Multiple sizes, pickup at class, etc."></textarea>
+        </label>
+
+        <button class="btn btn-solid order-submit" type="submit">Send Order</button>
+      </form>
     </div>
   </section>
 
@@ -124,6 +184,10 @@
   </div>
 </footer>
 
+<script>
+  window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+</script>
+<script defer src="/_vercel/insights/script.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>
