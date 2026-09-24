@@ -12,6 +12,7 @@ group photo cropped from a post with a verse overlay):
 - `assets/wordmark-flyer.png` → source art for the OG/link-card image
 - `assets/og-image.jpg` → social share link-card image (1200x630)
 - `assets/favicon-16.png`, `favicon-32.png`, `apple-touch-icon.png` → browser tab / home-screen icons
+- `assets/troika-logo.png` → Troika's own logo (pulled from troikastrengthandfitness.com), used in the membership plug
 
 To replace any of these, drop a new file in and update the matching `<img src>` — no other changes needed.
 
