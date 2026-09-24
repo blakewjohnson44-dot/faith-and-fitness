@@ -933,7 +933,8 @@ body.no-scroll { overflow: hidden; }
   .location-grid { grid-template-columns: 1fr; }
   .membership-plug { flex-direction: column; text-align: center; }
   .membership-plug-body { flex-direction: column; text-align: center; }
-  .membership-plug p { max-width: none; }
+  .membership-plug p { max-width: none; flex: none; }
+  .membership-plug-deal { white-space: normal; }
   .verse-block { grid-template-columns: 1fr; text-align: center; }
   .verse-photo { max-width: 260px; margin: 0 auto; }
   .merch-teaser-grid { grid-template-columns: 1fr; }
