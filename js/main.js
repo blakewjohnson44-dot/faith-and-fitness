@@ -1,3 +1,63 @@
+// ===== NEXT CLASS — update this block each month =====
+const NEXT_CLASS = {
+  date: "2026-10-24", // YYYY-MM-DD
+  time: "10:15 AM",
+  reserveUrl: "", // Wodify booking link for this class; leave "" until Troika posts it
+  coffee: "", // on-site coffee vendor, e.g. "Alive Coffee & More"; leave "" if none
+};
+// =====================================================
+
+const CLASS_INFO_URL = "https://www.troikastrengthandfitness.com/about-4";
+const INSTAGRAM_URL = "https://www.instagram.com/faithandfitness_422/";
+
+const classDay = new Date(`${NEXT_CLASS.date}T12:00:00`);
+const classIsUpcoming = Date.now() < new Date(`${NEXT_CLASS.date}T23:59:59`).getTime();
+const classIsReservable = classIsUpcoming && Boolean(NEXT_CLASS.reserveUrl);
+
+(function applyNextClass() {
+  const weekday = classDay.toLocaleDateString("en-US", { weekday: "long" });
+  const shortDate = classDay.toLocaleDateString("en-US", { month: "short", day: "numeric" });
+
+  let href = INSTAGRAM_URL;
+  let label = "Follow for the Next Date";
+  if (classIsReservable) {
+    href = NEXT_CLASS.reserveUrl;
+    label = "Reserve My Spot";
+  } else if (classIsUpcoming) {
+    href = CLASS_INFO_URL;
+    label = "Class Details";
+  }
+  document.querySelectorAll("[data-next-link]").forEach((a) => {
+    a.href = href;
+    a.textContent = a.dataset.nextLink === "with-date" && classIsUpcoming ? `${label} — ${shortDate}` : label;
+  });
+
+  const setText = (selector, text) => {
+    document.querySelectorAll(selector).forEach((el) => {
+      el.textContent = text;
+    });
+  };
+  if (classIsUpcoming) {
+    setText("[data-next-day]", weekday);
+    setText("[data-next-date]", shortDate);
+    setText("[data-next-time]", NEXT_CLASS.time);
+  } else {
+    setText("[data-next-day]", "Next date");
+    setText("[data-next-date]", "Coming soon");
+    setText("[data-next-time]", "Follow @faithandfitness_422");
+  }
+  setText("[data-next-when]", `${weekday}, ${shortDate} · ${NEXT_CLASS.time}`);
+
+  const coffee = document.querySelector("[data-next-coffee]");
+  if (coffee && classIsUpcoming && NEXT_CLASS.coffee) {
+    setText("[data-next-coffee-name]", NEXT_CLASS.coffee);
+    coffee.hidden = false;
+  }
+
+  const rsvpReserve = document.getElementById("rsvpModalReserve");
+  if (rsvpReserve && classIsReservable) rsvpReserve.href = NEXT_CLASS.reserveUrl;
+})();
+
 document.getElementById("year").textContent = new Date().getFullYear();
 
 const navToggle = document.getElementById("navToggle");
@@ -710,7 +770,7 @@ if (rsvpModal) {
     } catch (e) {}
   };
 
-  if (!alreadyDismissed) {
+  if (!alreadyDismissed && classIsReservable) {
     setTimeout(() => {
       rsvpModal.hidden = false;
     }, 8000);

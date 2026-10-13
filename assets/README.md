@@ -4,7 +4,7 @@ All real photos, pulled from @faithandfitness_422 on Instagram (and one
 group photo cropped from a post with a verse overlay):
 
 - `assets/logo.jpg` → nav + footer logo (from the Instagram profile photo)
-- `assets/hero-1.jpg` … `hero-5.jpg` → homepage hero auto-carousel (candid/current photos, natural aspect ratio — not tied to a specific past class)
+- `assets/hero-1.jpg`, `hero-2.jpg`, `hero-4.jpg`, `hero-5.jpg` → homepage hero auto-carousel (candid photos, natural aspect ratio — nothing tied to a specific class date)
 - `assets/moments/june-26.jpg`, `july-24.jpg`, `august-28.jpg`, `september-26.jpg` → Past Classes auto-carousel (one real flyer per past class, chronological, 4:5)
 - `assets/moments/community.jpg` → portrait group photo next to the Hebrews 10:24 quote
 - `assets/merch/tee-orchid.jpg`, `tee-ivory.jpg` → cropped from the merch preorder graphic
@@ -22,3 +22,5 @@ wheel/touch/drag interaction, resuming a couple seconds after the user lets go (
 `.auto-carousel-track` **and** its duplicate later in the same track (content is doubled once
 for a seamless loop — keep both copies in sync, same order). Past Classes should only ever hold
 one real flyer per actual past class; general/candid photos belong in the hero carousel instead.
+
+The next class's date, time, booking link, and coffee vendor all live in the `NEXT_CLASS` block at the top of `js/main.js` — update that one block each month.

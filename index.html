@@ -49,7 +49,7 @@
       <a href="#moments">Moments</a>
       <a href="merch.html">Merch</a>
       <a href="#location">Location</a>
-      <a class="nav-cta" href="https://troikastrengthandfitness.wodify.com/OnlineSalesPage/Main?q=MembershipType%7CLocationId%3D6740%26ClassId%3D196280361%26HasProgramAccess%3DFalse" target="_blank" rel="noopener">Reserve My Spot</a>
+      <a class="nav-cta" href="https://www.troikastrengthandfitness.com/about-4" target="_blank" rel="noopener" data-next-link>Class Details</a>
     </nav>
   </div>
 </header>
@@ -62,7 +62,7 @@
       <h1 class="hero-title">Faith <span class="amp">&amp;</span> Fitness</h1>
       <p class="hero-tagline">Stronger bodies. Brighter purpose.</p>
       <div class="hero-actions">
-        <a class="btn btn-solid" href="https://troikastrengthandfitness.wodify.com/OnlineSalesPage/Main?q=MembershipType%7CLocationId%3D6740%26ClassId%3D196280361%26HasProgramAccess%3DFalse" target="_blank" rel="noopener">Reserve My Spot — Sept 26</a>
+        <a class="btn btn-solid" href="https://www.troikastrengthandfitness.com/about-4" target="_blank" rel="noopener" data-next-link="with-date">Class Details</a>
         <a class="btn btn-line" href="https://www.instagram.com/faithandfitness_422/" target="_blank" rel="noopener">@faithandfitness_422</a>
       </div>
     </div>
@@ -71,12 +71,10 @@
       <div class="auto-carousel-track">
         <div class="auto-slide"><img src="assets/hero-1.jpg" alt="" loading="lazy"></div>
         <div class="auto-slide"><img src="assets/hero-2.jpg" alt="" loading="lazy"></div>
-        <div class="auto-slide"><img src="assets/hero-3.jpg" alt="" loading="lazy"></div>
         <div class="auto-slide"><img src="assets/hero-4.jpg" alt="" loading="lazy"></div>
         <div class="auto-slide"><img src="assets/hero-5.jpg" alt="" loading="lazy"></div>
         <div class="auto-slide"><img src="assets/hero-1.jpg" alt="" loading="lazy"></div>
         <div class="auto-slide"><img src="assets/hero-2.jpg" alt="" loading="lazy"></div>
-        <div class="auto-slide"><img src="assets/hero-3.jpg" alt="" loading="lazy"></div>
         <div class="auto-slide"><img src="assets/hero-4.jpg" alt="" loading="lazy"></div>
         <div class="auto-slide"><img src="assets/hero-5.jpg" alt="" loading="lazy"></div>
       </div>
@@ -133,19 +131,21 @@
     <div class="wrap next-class-grid">
       <div class="date-card">
         <p class="date-card-eyebrow">Next class</p>
-        <p class="date-card-day">Saturday</p>
-        <p class="date-card-date">Sept 26</p>
-        <p class="date-card-time">10:15 AM</p>
+        <p class="date-card-day" data-next-day>&nbsp;</p>
+        <p class="date-card-date" data-next-date>Coming soon</p>
+        <p class="date-card-time" data-next-time>&nbsp;</p>
         <div class="date-card-actions">
-          <a class="btn btn-solid small" href="https://troikastrengthandfitness.wodify.com/OnlineSalesPage/Main?q=MembershipType%7CLocationId%3D6740%26ClassId%3D196280361%26HasProgramAccess%3DFalse" target="_blank" rel="noopener">Reserve My Spot</a>
+          <a class="btn btn-solid small" href="https://www.troikastrengthandfitness.com/about-4" target="_blank" rel="noopener" data-next-link>Class Details</a>
           <a class="btn btn-line small" href="https://maps.google.com/?q=4440+Metric+Dr+Suite+A+Winter+Park+FL+32792" target="_blank" rel="noopener">Get Directions</a>
         </div>
       </div>
       <div class="info-card">
-        <p class="info-card-eyebrow">On-site this month</p>
-        <p class="info-card-title">Alive Coffee &amp; More</p>
-        <p class="info-card-note">Grab a coffee from a local vendor before class — proceeds support their small business, not ours.</p>
-        <div class="info-card-divider"></div>
+        <div data-next-coffee hidden>
+          <p class="info-card-eyebrow">On-site this month</p>
+          <p class="info-card-title" data-next-coffee-name></p>
+          <p class="info-card-note">Grab a coffee from a local vendor before class — proceeds support their small business, not ours.</p>
+          <div class="info-card-divider"></div>
+        </div>
         <p class="info-card-eyebrow">Cost</p>
         <p class="info-card-title">Free — for the whole community</p>
         <p class="info-card-note">No membership, no gear, no experience needed. Come as you are.</p>
@@ -254,11 +254,11 @@
   <div class="rsvp-modal-backdrop" data-close></div>
   <div class="rsvp-modal-card" role="dialog" aria-modal="true" aria-labelledby="rsvpModalTitle">
     <button class="rsvp-modal-close" id="rsvpModalClose" type="button" aria-label="Close">&times;</button>
-    <p class="section-label">Saturday, Sept 26 · 10:15 AM</p>
+    <p class="section-label" data-next-when></p>
     <h3 id="rsvpModalTitle">Save your spot?</h3>
     <p>Class is free and open to everyone — no sign-up required. But if you'd like to reserve a spot ahead of time, we'd love to see you there.</p>
     <div class="rsvp-modal-actions">
-      <a class="btn btn-solid" id="rsvpModalReserve" href="https://troikastrengthandfitness.wodify.com/OnlineSalesPage/Main?q=MembershipType%7CLocationId%3D6740%26ClassId%3D196280361%26HasProgramAccess%3DFalse" target="_blank" rel="noopener">Reserve My Spot</a>
+      <a class="btn btn-solid" id="rsvpModalReserve" href="#" target="_blank" rel="noopener">Reserve My Spot</a>
       <button class="btn btn-line" id="rsvpModalDismiss" type="button">Maybe Later</button>
     </div>
   </div>
