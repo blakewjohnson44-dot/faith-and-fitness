@@ -4,7 +4,7 @@ All real photos, pulled from @faithandfitness_422 on Instagram (and one
 group photo cropped from a post with a verse overlay):
 
 - `assets/logo.jpg` → nav + footer logo (from the Instagram profile photo)
-- `assets/hero-1.jpg`, `hero-2.jpg`, `hero-4.jpg`, `hero-5.jpg` → homepage hero auto-carousel (candid photos, natural aspect ratio — nothing tied to a specific class date)
+- `assets/hero-1.jpg`, `hero-2.jpg`, `hero-4.jpg`, `hero-6.jpg`, `hero-5.jpg` → homepage hero auto-carousel (`hero-6` is a worship still from the Sept 26 recap reel) (candid photos, natural aspect ratio — nothing tied to a specific class date)
 - `assets/moments/june-26.jpg`, `july-24.jpg`, `august-28.jpg`, `september-26.jpg` → Past Classes auto-carousel (one real flyer per past class, chronological, 4:5)
 - `assets/moments/community.jpg` → portrait group photo next to the Hebrews 10:24 quote
 - `assets/merch/tee-orchid.jpg`, `tee-ivory.jpg` → cropped from the merch preorder graphic
