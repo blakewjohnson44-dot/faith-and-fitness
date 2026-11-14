@@ -1,9 +1,9 @@
 // ===== NEXT CLASS — update this block each month =====
 const NEXT_CLASS = {
-  date: "2026-10-24", // YYYY-MM-DD
+  date: "2026-11-21", // YYYY-MM-DD
   time: "10:15 AM",
-  reserveUrl: "", // Wodify booking link for this class; leave "" until Troika posts it
-  coffee: "", // on-site coffee vendor, e.g. "Alive Coffee & More"; leave "" if none
+  reserveUrl: "https://troikastrengthandfitness.wodify.com/OnlineSalesPage/Main?q=MembershipType%7CLocationId%3D6740%26ClassId%3D198736784%26HasProgramAccess%3DFalse", // Wodify booking link for this class; leave "" until Troika posts it
+  coffee: "Alive Coffee & More", // on-site coffee vendor, e.g. "Alive Coffee & More"; leave "" if none
 };
 // =====================================================
 
