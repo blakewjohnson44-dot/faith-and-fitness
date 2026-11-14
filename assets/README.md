@@ -10,9 +10,12 @@ group photo cropped from a post with a verse overlay):
 - `assets/merch/tee-orchid.jpg`, `tee-ivory.jpg` → cropped from the merch preorder graphic
 - `assets/merch/preorder-graphic.jpg` → the original uncropped merch graphic, kept for reference
 - `assets/wordmark-flyer.png` → source art for the OG/link-card image
+- `assets/ff-wordmark-white.png` → white, transparent-background Faith & Fitness wordmark (made from `wordmark-flyer.png`) used big in the homepage hero
+- `assets/flyers/` → one flyer per class (named by date, e.g. `2026-11-21.jpg`), shown in the "Save your spot?" popup via `flyer` in `NEXT_CLASS`
+- `assets/coaching.jpg` + `assets/hero-6.jpg` → the two full-screen photos that cross-fade behind the homepage hero
 - `assets/og-image.jpg` → social share link-card image (1200x630)
 - `assets/favicon-16.png`, `favicon-32.png`, `apple-touch-icon.png` → browser tab / home-screen icons
-- `assets/troika-logo.png` → Troika's own logo (pulled from troikastrengthandfitness.com), used in the membership plug
+- `assets/troika-logo.png` → Troika's own logo (pulled from troikastrengthandfitness.com), used in the hero ("Troika Strength & Fitness presents") and the membership plug
 
 To replace any of these, drop a new file in and update the matching `<img src>` — no other changes needed.
 
@@ -23,4 +26,4 @@ wheel/touch/drag interaction, resuming a couple seconds after the user lets go (
 for a seamless loop — keep both copies in sync, same order). Past Classes should only ever hold
 one real flyer per actual past class; general/candid photos belong in the hero carousel instead.
 
-The next class's date, time, booking link, and coffee vendor all live in the `NEXT_CLASS` block at the top of `js/main.js` — update that one block each month.
+The next class's date, time, booking link, coffee vendor, and flyer (shown in the "Save your spot?" popup) all live in the `NEXT_CLASS` block at the top of `js/main.js` — update that one block each month.

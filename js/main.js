@@ -1,9 +1,10 @@
 // ===== NEXT CLASS — update this block each month =====
 const NEXT_CLASS = {
-  date: "2026-10-24", // YYYY-MM-DD
+  date: "2026-11-21", // YYYY-MM-DD
   time: "10:15 AM",
-  reserveUrl: "", // Wodify booking link for this class; leave "" until Troika posts it
-  coffee: "", // on-site coffee vendor, e.g. "Alive Coffee & More"; leave "" if none
+  reserveUrl: "https://troikastrengthandfitness.wodify.com/OnlineSalesPage/Main?q=MembershipType%7CLocationId%3D6740%26ClassId%3D198736784%26HasProgramAccess%3DFalse", // Wodify booking link for this class; leave "" until Troika posts it
+  coffee: "Alive Coffee & More", // on-site coffee vendor, e.g. "Alive Coffee & More"; leave "" if none
+  flyer: "assets/flyers/2026-11-21.jpg", // this class's flyer image, e.g. "assets/flyers/2026-11-21.jpg"; shown in the "Save your spot?" popup; leave "" if none
 };
 // =====================================================
 
@@ -47,6 +48,13 @@ const classIsReservable = classIsUpcoming && Boolean(NEXT_CLASS.reserveUrl);
     setText("[data-next-time]", "Follow @faithandfitness_422");
   }
   setText("[data-next-when]", `${weekday}, ${shortDate} · ${NEXT_CLASS.time}`);
+  setText(
+    "[data-next-ticker]",
+    classIsUpcoming
+      ? `Next class · ${weekday}, ${shortDate} · ${NEXT_CLASS.time}`
+      : "Next date coming soon · Follow @faithandfitness_422",
+  );
+  if (classIsUpcoming) setText("[data-next-hero]", `${weekday}, ${shortDate} · ${NEXT_CLASS.time} · Free for everyone`);
 
   const coffee = document.querySelector("[data-next-coffee]");
   if (coffee && classIsUpcoming && NEXT_CLASS.coffee) {
@@ -56,9 +64,25 @@ const classIsReservable = classIsUpcoming && Boolean(NEXT_CLASS.reserveUrl);
 
   const rsvpReserve = document.getElementById("rsvpModalReserve");
   if (rsvpReserve && classIsReservable) rsvpReserve.href = NEXT_CLASS.reserveUrl;
+
+  const rsvpFlyer = document.getElementById("rsvpFlyer");
+  if (rsvpFlyer && classIsUpcoming && NEXT_CLASS.flyer) {
+    rsvpFlyer.src = NEXT_CLASS.flyer;
+    rsvpFlyer.alt = `Faith and Fitness class flyer for ${weekday}, ${shortDate} at ${NEXT_CLASS.time}`;
+    rsvpFlyer.hidden = false;
+    rsvpFlyer.closest(".rsvp-modal-card").classList.add("has-flyer");
+  }
 })();
 
 document.getElementById("year").textContent = new Date().getFullYear();
+
+// Transparent header over the hero turns solid once the page scrolls
+const overlayHeader = document.querySelector(".site-header.is-overlay");
+if (overlayHeader) {
+  const syncHeader = () => overlayHeader.classList.toggle("is-scrolled", window.scrollY > 24);
+  syncHeader();
+  window.addEventListener("scroll", syncHeader, { passive: true });
+}
 
 const navToggle = document.getElementById("navToggle");
 const siteNav = document.getElementById("siteNav");
