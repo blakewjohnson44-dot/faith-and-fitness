@@ -3,7 +3,7 @@ const NEXT_CLASS = {
   date: "2026-11-21", // YYYY-MM-DD
   time: "10:15 AM",
   reserveUrl: "https://troikastrengthandfitness.wodify.com/OnlineSalesPage/Main?q=MembershipType%7CLocationId%3D6740%26ClassId%3D198736784%26HasProgramAccess%3DFalse", // Wodify booking link for this class; leave "" until Troika posts it
-  coffee: "Alive Coffee & More", // on-site coffee vendor, e.g. "Alive Coffee & More"; leave "" if none
+  coffee: "", // on-site coffee vendor, e.g. "Alive Coffee & More"; leave "" if none
   flyer: "assets/flyers/2026-11-21.jpg", // this class's flyer image, e.g. "assets/flyers/2026-11-21.jpg"; shown in the "Save your spot?" popup; leave "" if none
 };
 // =====================================================
@@ -76,6 +76,17 @@ const classIsReservable = classIsUpcoming && Boolean(NEXT_CLASS.reserveUrl);
 
 document.getElementById("year").textContent = new Date().getFullYear();
 
+// Hero background: cross-fade to the next photo every few seconds
+const heroSlides = [...document.querySelectorAll(".hero-bg img")];
+if (heroSlides.length > 1 && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+  let heroIndex = 0;
+  setInterval(() => {
+    heroSlides[heroIndex].classList.remove("is-active");
+    heroIndex = (heroIndex + 1) % heroSlides.length;
+    heroSlides[heroIndex].classList.add("is-active");
+  }, 6000);
+}
+
 // Transparent header over the hero turns solid once the page scrolls
 const overlayHeader = document.querySelector(".site-header.is-overlay");
 if (overlayHeader) {
@@ -108,9 +119,27 @@ function initAutoScroll(root) {
   const SPEED = 32; // px per second
   const RESUME_DELAY = 2000;
 
+  // The markup holds the slides twice (one set + its duplicate). The loop only
+  // works if one set is wider than the strip, so on wide screens repeat the set
+  // (in pairs, keeping both halves identical) until it is.
+  const baseSlides = [...track.children].slice(0, track.children.length / 2);
+  let copies = 2;
+  const baseImages = baseSlides.flatMap((slide) => [...slide.querySelectorAll("img")]);
+  const fillTrack = () => {
+    // wait until every photo has its real width, or the math comes out short
+    if (baseImages.some((img) => !img.complete || img.naturalWidth === 0)) return;
+    while (track.scrollWidth / 2 < root.clientWidth + 40 && copies < 16) {
+      for (let i = 0; i < 2; i++) {
+        baseSlides.forEach((slide) => track.appendChild(slide.cloneNode(true)));
+      }
+      copies += 2;
+    }
+  };
+
   let setWidth = 0;
   let hasPositioned = false;
   const measure = () => {
+    fillTrack();
     setWidth = track.scrollWidth / 2;
     // start reverse-direction carousels mid-way so they have room to decrement
     if (!hasPositioned && direction === -1 && setWidth > 0) {
@@ -175,12 +204,22 @@ function initAutoScroll(root) {
 
   if (reduceMotion) return;
 
+  // Browsers round scrollLeft to whole pixels, so a sub-pixel step per frame
+  // would be lost. Keep the exact position here and write it out each frame.
+  let position = root.scrollLeft;
   let lastTime = null;
   const step = (timestamp) => {
     if (!paused && setWidth > 0) {
       if (lastTime == null) lastTime = timestamp;
       const dt = (timestamp - lastTime) / 1000;
-      root.scrollLeft += direction * SPEED * dt;
+      // pick up any jump from dragging, wheel, or the loop wrap
+      if (Math.abs(root.scrollLeft - position) > 2) position = root.scrollLeft;
+      position += direction * SPEED * dt;
+      if (position >= setWidth) position -= setWidth;
+      else if (position <= 0) position += setWidth;
+      root.scrollLeft = position;
+    } else {
+      position = root.scrollLeft;
     }
     lastTime = timestamp;
     requestAnimationFrame(step);

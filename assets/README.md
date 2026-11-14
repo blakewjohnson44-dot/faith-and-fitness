@@ -12,7 +12,7 @@ group photo cropped from a post with a verse overlay):
 - `assets/wordmark-flyer.png` → source art for the OG/link-card image
 - `assets/ff-wordmark-white.png` → white, transparent-background Faith & Fitness wordmark (made from `wordmark-flyer.png`) used big in the homepage hero
 - `assets/flyers/` → one flyer per class (named by date, e.g. `2026-11-21.jpg`), shown in the "Save your spot?" popup via `flyer` in `NEXT_CLASS`
-- `assets/coaching.jpg` + `assets/hero-6.jpg` → the two full-screen photos that cross-fade behind the homepage hero
+- Homepage hero background → `assets/coaching.jpg`, `assets/hero/group.jpg`, `assets/hero/lift-1.jpg`, `assets/hero-6.jpg` (worship), `assets/hero/class.jpg`, `assets/hero/lift-2.jpg`, cross-fading in that order every 6 seconds. The `assets/hero/` photos are from troikastrengthandfitness.com. To add or remove one, edit the `<img>` list inside `.hero-bg` in `index.html` (only the first keeps `class="is-active"`); use photos without text on them.
 - `assets/og-image.jpg` → social share link-card image (1200x630)
 - `assets/favicon-16.png`, `favicon-32.png`, `apple-touch-icon.png` → browser tab / home-screen icons
 - `assets/troika-logo.png` → Troika's own logo (pulled from troikastrengthandfitness.com), used in the hero ("Troika Strength & Fitness presents") and the membership plug
